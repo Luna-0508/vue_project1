@@ -19,27 +19,25 @@ export default {
 
 <template>
   <div id="table">
-    <table>
-      <tr v-for="post in posts" v-bind:key="post.id">
-        <td>{{ post.name }}</td>
-        <td>{{ post.username }}</td>
-        <td>{{ post.address.street }}</td>
-        <td>{{ post.address.suite }}</td>
-        <td>{{ post.address.city }}</td>
-        <td>{{ post.phone }}</td>
-        <td>{{ post.website }}</td>
-        <td>{{ post.company.name }}</td>
-        <td>{{ post.company.catchPhrase }}</td>
-        <td>{{ post.company.bs }}</td>
-      </tr>
-    </table>
+    <DataTable
+      :value="posts"
+      class="p-datatable-sm"
+      showGridlines
+      responsiveLayout="scroll"
+    >
+      <Column field="name" header="NAME"></Column>
+      <Column field="username" header="USERNAME"></Column>
+      <Column field="address" header="ADDRESS"></Column>
+      <Column field="phone" header="PHONE"></Column>
+      <Column field="website" header="WEBSITE"></Column>
+      <Column field="company" header="COMPANY"></Column>
+
+      <!-- <td>{{ post.address.street }}</td>
+      <td>{{ post.address.suite }}</td>
+      <td>{{ post.address.city }}</td>
+      <td>{{ post.company.name }}</td>
+      <td>{{ post.company.catchPhrase }}</td>
+      <td>{{ post.company.bs }}</td> -->
+    </DataTable>
   </div>
 </template>
-
-<style scoped>
-table,
-tr,
-td {
-  border: 1px solid;
-}
-</style>
