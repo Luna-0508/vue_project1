@@ -21,9 +21,11 @@ export default {
   <div id="table">
     <DataTable
       :value="posts"
-      class="p-datatable-lg"
+      class="p-datatable-sm"
       showGridlines
       responsiveLayout="scroll"
+      :resizableColumns="true"
+      columnResizeMode="expand"
     >
       <template #header>
         <div class="table-header">USERS LIST</div>
@@ -31,23 +33,32 @@ export default {
 
       <Column field="name" header="NAME" :sortable="true"></Column>
       <Column field="username" header="USERNAME" :sortable="true"></Column>
-      <Column field="address" header="ADDRESS">
-        <!-- <template #body="slotProps">
-          <div>
-            {{ slotProps.data.street }}
-          </div>
-        </template>-->
-      </Column>
+      <Column field="address.street" header="ADDRESS" :colspan="3"> </Column>
+      <Column field="address.suite"></Column>
+      <Column field="address.city"></Column>
       <Column field="phone" header="PHONE"></Column>
       <Column field="website" header="WEBSITE"></Column>
-      <Column field="company" header="COMPANY"></Column>
+      <Column field="company.name" header="COMPANY"></Column>
+      <Column field="company.catchPhrase"></Column>
+      <Column field="company.bs"></Column>
 
-      <!-- <td>{{ post.address.street }}</td>
-      <td>{{ post.address.suite }}</td>
-      <td>{{ post.address.city }}</td>
-      <td>{{ post.company.name }}</td>
-      <td>{{ post.company.catchPhrase }}</td>
-      <td>{{ post.company.bs }}</td> -->
+      <!-- TODO: merge cells (address, company) without moving data to the right -->
+
+      <!-- <ColumnGroup type="header">
+        <Row>
+          <Column header="NAME" :sortable="true" />
+          <Column header="USERNAME" :sortable="true" />
+          <Column header="ADDRESS" :colspan="3" />
+          <Column header="PHONE" />
+        </Row>
+      </ColumnGroup>
+
+      <Column field="name"></Column>
+      <Column field="username"></Column>
+      <Column field="address.street"> </Column>
+      <Column field="address.suite"></Column>
+      <Column field="address.city"></Column>
+      <Column field="phone"></Column> -->
     </DataTable>
   </div>
 </template>
