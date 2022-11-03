@@ -11,4 +11,6 @@ describe("My Second Test", () =>
     cy.get("#todo").type("EXAMPLE");
 
     cy.get("#button").click();
+
+    cy.contains("EXAMPLE").should("be.visible");
   }));

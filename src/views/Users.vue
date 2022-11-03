@@ -21,13 +21,23 @@ export default {
   <div id="table">
     <DataTable
       :value="posts"
-      class="p-datatable-sm"
+      class="p-datatable-lg"
       showGridlines
       responsiveLayout="scroll"
     >
-      <Column field="name" header="NAME"></Column>
-      <Column field="username" header="USERNAME"></Column>
-      <Column field="address" header="ADDRESS"></Column>
+      <template #header>
+        <div class="table-header">USERS LIST</div>
+      </template>
+
+      <Column field="name" header="NAME" :sortable="true"></Column>
+      <Column field="username" header="USERNAME" :sortable="true"></Column>
+      <Column field="address" header="ADDRESS">
+        <!-- <template #body="slotProps">
+          <div>
+            {{ slotProps.data.street }}
+          </div>
+        </template>-->
+      </Column>
       <Column field="phone" header="PHONE"></Column>
       <Column field="website" header="WEBSITE"></Column>
       <Column field="company" header="COMPANY"></Column>
