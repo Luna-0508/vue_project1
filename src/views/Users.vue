@@ -33,7 +33,7 @@ export default {
 
       <Column field="name" header="NAME" :sortable="true"></Column>
       <Column field="username" header="USERNAME" :sortable="true"></Column>
-      <Column field="address.street" header="ADDRESS" :colspan="3"> </Column>
+      <Column field="address.street" header="ADDRESS"> </Column>
       <Column field="address.suite"></Column>
       <Column field="address.city"></Column>
       <Column field="phone" header="PHONE"></Column>
