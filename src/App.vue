@@ -7,9 +7,7 @@ import HelloWorld from "./components/HelloWorld.vue";
   <RouterView />
 </template>
 
-<styles lang="sass">
-@import '@/assets/_variables.scss'
-
+<styles>
 
 </styles>
 
