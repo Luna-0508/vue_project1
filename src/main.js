@@ -13,6 +13,7 @@ import Column from "primevue/column";
 import "primevue/resources/themes/lara-light-blue/theme.css"; //theme
 import "primevue/resources/primevue.min.css"; //core css
 import "primeicons/primeicons.css";
+import "./assets/_app.scss";
 
 const app = createApp(App);
 
