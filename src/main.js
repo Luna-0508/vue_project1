@@ -13,6 +13,7 @@ import Column from "primevue/column";
 import "primevue/resources/themes/lara-light-blue/theme.css"; //theme
 import "primevue/resources/primevue.min.css"; //core css
 import "primeicons/primeicons.css";
+import Menubar from "primevue/menubar";
 import "./assets/_app.scss";
 import "/node_modules/primeflex/primeflex.css";
 const app = createApp(App);
@@ -20,9 +21,9 @@ const app = createApp(App);
 app.use(createPinia());
 app.use(router);
 
-app.mount("#app");
-
 app.use(PrimeVue);
 app.component("Dialog", Dialog);
 app.component("DataTable", DataTable);
 app.component("Column", Column);
+app.component("Menubar", Menubar);
+app.mount("#app");
