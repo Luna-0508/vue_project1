@@ -15,7 +15,11 @@
           <slot> </slot>
         </div>
         <!-- FOOTER -->
-        <div></div>
+        <div class="bg-indigo-400 h-4rem">
+          <div class="flex align-items-center justify-content-center">
+            <p>&copy; Vue.js APP 2022</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
