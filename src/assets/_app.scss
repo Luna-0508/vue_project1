@@ -1,8 +1,39 @@
-body {
-  background-color: #e5e5e5;
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  padding: 0;
   width: 100%;
-  // header {
-  //   background-color: #6e59f2;
-  //   height: 100px;
-  // }
+}
+
+body {
+  background-color: rgb(205, 205, 255);
+
+  #header {
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    right: 0;
+    border: 1px solid #6620cf;
+    display: flex;
+    justify-content: space-between;
+
+    #mainTitle {
+      text-shadow: 2px 2px#6620cf;
+    }
+
+    #menubar {
+      margin: auto 0;
+    }
+  }
+
+  #main {
+    padding: 40px;
+  }
+
+  #footer {
+    border: 1px solid #6620cf;
+    color: rgb(205, 205, 255);
+  }
 }
