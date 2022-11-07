@@ -2,14 +2,8 @@
 import Form from "./Form.vue";
 
 export default {
-  props: {
-    isEdit: {
-      required: true,
-    },
-  },
-
   methods: {
-    test() {
+    message() {
       alert("Poszło");
     },
   },
@@ -21,5 +15,5 @@ export default {
 </script>
 
 <template>
-  <Form :isEdit="false" @test="test"></Form>
+  <Form :isEdit="false" @message="test"></Form>
 </template>
