@@ -2,9 +2,9 @@
 <script>
 export default {
   data() {
-    // return {
-    //   terms: true,
-    // };
+    return {
+      value: true,
+    };
   },
 };
 </script>

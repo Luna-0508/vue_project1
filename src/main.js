@@ -16,7 +16,9 @@ import "primevue/resources/primevue.min.css"; //core css
 import "primeicons/primeicons.css";
 import Menubar from "primevue/menubar";
 import Checkbox from "primevue/checkbox";
+import Button from "primevue/button";
 import InputSwitch from "primevue/inputswitch";
+
 import "./assets/_app.scss";
 import "/node_modules/primeflex/primeflex.css";
 
@@ -33,5 +35,6 @@ app.component("Menubar", Menubar);
 app.component("InputText", InputText);
 app.component("Checkbox", Checkbox);
 app.component("InputSwitch", InputSwitch);
+app.component("Button", Button);
 
 app.mount("#app");
