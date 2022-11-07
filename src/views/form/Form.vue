@@ -1,5 +1,5 @@
 <script>
-import Form from "../components/FORM/Form.vue";
+import Form from "../form/Form.vue";
 
 export default {
   methods: {

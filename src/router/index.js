@@ -2,9 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import ToDoList from "../views/ToDoList.vue";
 import Users from "../views/Users.vue";
 import App from "../App.vue";
-import Form from "../views/Form.vue";
-import Create from "../views/Create.vue";
-import Update from "../views/Update.vue";
+import Form from "../views/form/Form.vue";
+import Create from "../views/form/Create.vue";
+import Update from "../views/form/Update.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
