@@ -5,8 +5,19 @@ import Update from "./Update.vue";
 export default {
   data() {
     return {
-      value: true,
+      value: [],
     };
+  },
+
+  methods: {
+    isEdit() {
+      $emit("clicked", alert("siemanko wszystkim"));
+    },
+  },
+
+  components: {
+    Create,
+    Update,
   },
 };
 </script>

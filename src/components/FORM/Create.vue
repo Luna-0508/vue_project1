@@ -1,6 +1,9 @@
 <script>
 export default {
-  name: "",
-  props: {},
+  props: {
+    isEdit: {
+      required: true,
+    },
+  },
 };
 </script>

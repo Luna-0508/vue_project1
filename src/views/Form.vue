@@ -4,7 +4,7 @@ import Form from "../components/FORM/Form.vue";
 
 <template>
   <h1>NEW CLIENT</h1>
-  <form>
+  <form isEdit="{true}">
     <div class="card">
       <div class="p-fluid grid">
         <div class="field col-12 md:col-4">
@@ -49,7 +49,7 @@ import Form from "../components/FORM/Form.vue";
         <h2>Agree to Terms and Conditions</h2>
       </div>
     </div>
-    <Button label="Submit" />
+    <Button label="Submit" @click="isEdit" />
   </form>
 </template>
 
