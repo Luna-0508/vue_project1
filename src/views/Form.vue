@@ -1,5 +1,13 @@
 <script>
 import Form from "../components/FORM/Form.vue";
+
+export default {
+  methods: {
+    handleEdit() {
+      this.$emit("test");
+    },
+  },
+};
 </script>
 
 <template>
@@ -49,7 +57,7 @@ import Form from "../components/FORM/Form.vue";
         <h2>Agree to Terms and Conditions</h2>
       </div>
     </div>
-    <Button label="Submit" @click="isEdit" />
+    <Button label="Submit" @click="handleEdit" />
   </form>
 </template>
 
