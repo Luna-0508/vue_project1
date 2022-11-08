@@ -1,7 +1,13 @@
 <script>
 import Form from "../form/Form.vue";
 import { useVuelidate } from "@vuelidate/core";
-import { required, email } from "@vuelidate/validators";
+import {
+  required,
+  email,
+  minLength,
+  maxLength,
+  alpha,
+} from "@vuelidate/validators";
 
 export default {
   setup() {
@@ -26,12 +32,16 @@ export default {
   validations() {
     return {
       value: {
-        name: { required },
-        surname: { required },
+        name: { required, alpha },
+        surname: { required, alpha },
         email: { required, email },
         street: { required },
-        zipcode: { required },
-        city: { required },
+        zipcode: {
+          required,
+          minLengthValue: minLength(6),
+          maxLengthValue: maxLength(6),
+        },
+        city: { required, alpha },
         terms: { required },
       },
     };
@@ -110,7 +120,7 @@ export default {
           <span class="p-float-label">
             <InputText
               id="zipCode"
-              type="number"
+              type="text"
               v-model="v$.value.zipcode.$model"
             />
             <label for="zipCode">Zip-code</label>
