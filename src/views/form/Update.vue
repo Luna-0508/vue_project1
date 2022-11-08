@@ -9,8 +9,5 @@ export default {
 </script>
 
 <template>
-  <section>
-    <h1 :isEdit="true" v-if="isEdit">JESTEŚ W TRYBIE EDYCYJNYM</h1>
-    <Form></Form>
-  </section>
+  <Form :isEdit="true"></Form>
 </template>

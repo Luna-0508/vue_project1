@@ -2,6 +2,11 @@
 import Form from "../form/Form.vue";
 
 export default {
+  props: {
+    isEdit: {
+      required: true,
+    },
+  },
   methods: {
     handleEdit() {
       this.$emit("test");
@@ -11,6 +16,7 @@ export default {
 </script>
 
 <template>
+  <h1 v-if="isEdit">JESTEŚ W TRYBIE EDYCYJNYM</h1>
   <h1>NEW CLIENT</h1>
   <form isEdit="{true}">
     <div class="card">
