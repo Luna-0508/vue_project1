@@ -2,9 +2,6 @@
 import Create from "./Create.vue";
 import Update from "./Update.vue";
 
-import { useVuelidate } from "@vuelidate/core";
-import { required, email } from "@vuelidate/validators";
-
 export default {
   setup() {
     return { v$: useVuelidate() };
