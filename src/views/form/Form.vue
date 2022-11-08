@@ -19,7 +19,7 @@ export default {
         street: "",
         zipcode: "",
         city: "",
-        // terms: true,
+        terms: "",
       },
     };
   },
@@ -32,7 +32,7 @@ export default {
         street: { required },
         zipcode: { required },
         city: { required },
-        // terms: { required },
+        terms: { required },
       },
     };
   },
@@ -53,6 +53,11 @@ export default {
         alert("Form submit success!");
       } else {
         alert("Form failed");
+      }
+    },
+    checkSwitchOn() {
+      if (this.hasClass("p-inputswitch-checked") === true) {
+        return true;
       }
     },
   },
@@ -119,7 +124,7 @@ export default {
         </div>
       </div>
       <div id="term">
-        <InputSwitch v-model="v$.value.$model" />
+        <InputSwitch v-model="v$.value.terms.$model" @checkSwitchOn="true" />
         <h2>Agree to Terms and Conditions</h2>
       </div>
     </div>
