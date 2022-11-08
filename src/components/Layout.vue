@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="page">
     <!-- HEADER -->
     <div id="header" class="sticky bg-indigo-400 bg-contain w-full right-0">
       <div id="mainTitle" class="text-5xl text-white font-semibold">
