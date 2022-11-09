@@ -5,6 +5,10 @@ import Layout from "./components/Layout.vue";
 import { useUsers } from "./stores/users";
 
 export default {
+  components: {
+    Layout,
+  },
+
   data() {
     return {};
   },
