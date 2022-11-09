@@ -1,16 +1,22 @@
 <script>
 import { def } from "@vue/shared";
-import { setupMaster } from "cluster";
 import { RouterLink, RouterView } from "vue-router";
 import Layout from "./components/Layout.vue";
-import useUsers from "./stores/users";
-const user = useUsers();
+import { useUsers } from "./stores/users";
 
-// export default {
-//   computed: {
-//     mapStore(useUser) {},
-//   },
-// };
+export default {
+  data() {
+    return {};
+  },
+
+  mounted() {
+    const user = useUsers();
+    // let fName =  prompt("Podaj swoje imię:"),
+    // let lName = prompt("Podaj swoje nazwisko:"),
+    // let userName = `${fName} ${lName}`,
+    user.setName("Natalia");
+  },
+};
 </script>
 
 <template>

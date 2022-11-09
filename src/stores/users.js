@@ -1,17 +1,19 @@
 import { getBaseTransformPreset } from "@vue/compiler-core";
 import { defineStore } from "pinia";
 
-export default useUsers = defineStore("user", {
+export const useUsers = defineStore("user", {
   state: () => {
     return {
-      user: userName,
+      userName: "",
     };
   },
   actions: {
-    setName() {
-      userName = prompt("Podaj swoje imię:");
+    setName(name) {
+      this.userName = name;
     },
 
-    displayName() {},
+    getName() {
+      return this.userName;
+    },
   },
 });

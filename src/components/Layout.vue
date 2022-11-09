@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import { useUsers } from "../stores/users.js";
 export default {
   data() {
     return {
@@ -55,6 +56,14 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    console.log(this.getUser());
+  },
+  methods: {
+    getUser() {
+      return this.state.user;
+    },
   },
 };
 </script>
