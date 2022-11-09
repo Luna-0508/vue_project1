@@ -1,6 +1,16 @@
-<script setup>
+<script>
+import { def } from "@vue/shared";
+import { setupMaster } from "cluster";
 import { RouterLink, RouterView } from "vue-router";
 import Layout from "./components/Layout.vue";
+import useUsers from "./stores/users";
+const user = useUsers();
+
+// export default {
+//   computed: {
+//     mapStore(useUser) {},
+//   },
+// };
 </script>
 
 <template>
