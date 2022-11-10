@@ -5,6 +5,7 @@ import App from "../App.vue";
 import Form from "../views/form/Form.vue";
 import Create from "../views/form/Create.vue";
 import Update from "../views/form/Update.vue";
+import Show from "../views/Show.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
       path: "/update",
       name: "update",
       component: Update,
+    },
+    {
+      path: "/show",
+      name: "show",
+      component: Show,
     },
   ],
 });

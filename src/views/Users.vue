@@ -14,6 +14,11 @@ export default {
       this.posts = response.data;
     });
   },
+  methods: {
+    takeToShow() {
+      this.$route.push("show");
+    },
+  },
 };
 </script>
 
@@ -43,7 +48,15 @@ export default {
       <Column field="company.bs"></Column>
       <Column field="button" header="PRZEJDŻ DO">
         <template #body>
-          <Button type="button" icon="pi pi-arrow-right"></Button>
+          <router-link
+            :to="{
+              name: 'show',
+              // params: {
+              //   id: 1,
+              // },
+            }"
+            ><Button type="button" icon="pi pi-arrow-right"></Button>
+          </router-link>
         </template>
       </Column>
     </DataTable>
