@@ -1,6 +1,4 @@
 <script>
-import Users from "../components/Users.vue";
-
 import axios from "axios";
 
 export default {
@@ -24,7 +22,13 @@ export default {
         name: "show",
         params: { id: index }, // dobrze dałaś name, ale params musisz wskazać jaki obiekt przenosisz. w tym wypadku id.
       });
-      /// teraz pytanie - skąd wziąć to id?!
+    },
+
+    goEdit(index) {
+      this.$router.push({
+        name: "edit",
+        params: { id: index },
+      });
     },
   },
 };
@@ -54,12 +58,21 @@ export default {
       <Column field="company.name" header="COMPANY"></Column>
       <Column field="company.catchPhrase"></Column>
       <Column field="company.bs"></Column>
-      <Column header="#" headerStyle="width:3em">
+      <Column header="SHOW ID" headerStyle="width:3em">
         <template #body="slotProps">
           <Button
             type="button"
             icon="pi pi-arrow-right"
             @click="goToShow(slotProps.index)"
+          ></Button>
+        </template>
+      </Column>
+      <Column header="EDIT" headerStyle="width:3em">
+        <template #body="slotProps">
+          <Button
+            type="button"
+            icon="pi pi-eraser"
+            @click="goEdit(slotProps.index)"
           ></Button>
         </template>
       </Column>

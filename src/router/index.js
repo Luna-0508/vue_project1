@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 import ToDoList from "../views/ToDoList.vue";
-import Users from "../views/Users.vue";
+import Users from "../views/users/Users.vue";
 import App from "../App.vue";
 import Form from "../views/form/Form.vue";
 import Create from "../views/form/Create.vue";
 import Update from "../views/form/Update.vue";
-import Show from "../views/Show.vue";
+import Show from "../views/users/Show.vue";
+import Edit from "../views/users/Edit.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
       path: "/show/:id", // tak się deklaruje elementy, które chcesz przenieść. to to samo id, które przekazałaś w this.$route.params.
       name: "show",
       component: Show,
+    },
+    {
+      path: "/edit/:id",
+      name: "edit",
+      component: Edit,
     },
   ],
 });
