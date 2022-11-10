@@ -41,24 +41,11 @@ export default {
       <Column field="company.name" header="COMPANY"></Column>
       <Column field="company.catchPhrase"></Column>
       <Column field="company.bs"></Column>
-
-      <!-- TODO: merge cells (address, company) without moving data to the right -->
-
-      <!-- <ColumnGroup type="header">
-        <Row>
-          <Column header="NAME" :sortable="true" />
-          <Column header="USERNAME" :sortable="true" />
-          <Column header="ADDRESS" :colspan="3" />
-          <Column header="PHONE" />
-        </Row>
-      </ColumnGroup>
-
-      <Column field="name"></Column>
-      <Column field="username"></Column>
-      <Column field="address.street"> </Column>
-      <Column field="address.suite"></Column>
-      <Column field="address.city"></Column>
-      <Column field="phone"></Column> -->
+      <Column field="button" header="PRZEJDŻ DO">
+        <template #body>
+          <Button type="button" icon="pi pi-arrow-right"></Button>
+        </template>
+      </Column>
     </DataTable>
   </div>
 </template>

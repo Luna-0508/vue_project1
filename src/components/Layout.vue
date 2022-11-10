@@ -57,9 +57,9 @@ export default {
       ],
     };
   },
-  mounted() {
-    console.log(this.getUser());
-  },
+  // mounted() {
+  //   console.log(this.getUser());
+  // },
   methods: {
     getUser() {
       return this.state.user;
