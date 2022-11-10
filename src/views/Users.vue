@@ -15,8 +15,16 @@ export default {
     });
   },
   methods: {
-    takeToShow() {
-      this.$route.push("show");
+    goToShow(index) {
+      //to co zostało wywołane będzie tędy przychodziło
+      //metodę przygotowałaś dobrą - jednak struktura jest źle stworzona.
+      //przy methods nie musisz (choć możesz) dawać return, ale dajesz to jako inline
+      console.log(index);
+      this.$router.push({
+        name: "show",
+        params: { id: index }, // dobrze dałaś name, ale params musisz wskazać jaki obiekt przenosisz. w tym wypadku id.
+      });
+      /// teraz pytanie - skąd wziąć to id?!
     },
   },
 };
@@ -46,17 +54,13 @@ export default {
       <Column field="company.name" header="COMPANY"></Column>
       <Column field="company.catchPhrase"></Column>
       <Column field="company.bs"></Column>
-      <Column field="button" header="PRZEJDŻ DO">
-        <template #body>
-          <router-link
-            :to="{
-              name: 'show',
-              // params: {
-              //   id: 1,
-              // },
-            }"
-            ><Button type="button" icon="pi pi-arrow-right"></Button>
-          </router-link>
+      <Column header="#" headerStyle="width:3em">
+        <template #body="slotProps">
+          <Button
+            type="button"
+            icon="pi pi-arrow-right"
+            @click="goToShow(slotProps.index)"
+          ></Button>
         </template>
       </Column>
     </DataTable>

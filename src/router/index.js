@@ -41,7 +41,7 @@ const router = createRouter({
       component: Update,
     },
     {
-      path: "/show",
+      path: "/show/:id", // tak się deklaruje elementy, które chcesz przenieść. to to samo id, które przekazałaś w this.$route.params.
       name: "show",
       component: Show,
     },
