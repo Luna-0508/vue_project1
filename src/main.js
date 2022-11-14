@@ -18,6 +18,8 @@ import Menubar from "primevue/menubar";
 import Checkbox from "primevue/checkbox";
 import Button from "primevue/button";
 import InputSwitch from "primevue/inputswitch";
+import TabMenu from "primevue/tabmenu";
+import ScrollTop from "primevue/scrolltop";
 
 import "./assets/_app.scss";
 import "/node_modules/primeflex/primeflex.css";
@@ -36,5 +38,7 @@ app.component("InputText", InputText);
 app.component("Checkbox", Checkbox);
 app.component("InputSwitch", InputSwitch);
 app.component("Button", Button);
+app.component("TabMenu", TabMenu);
+app.component("ScrollTop", ScrollTop);
 
 app.mount("#app");

@@ -2,40 +2,26 @@
   box-sizing: border-box;
 }
 
-#app {
-  padding: 0;
-}
+#body {
+  min-height: 100vh;
+  background-color: #006699;
+  position: relative;
 
-body {
-  background-color: rgb(205, 205, 255);
-  #page {
-    width: 100%;
+  #header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
 
-    #header {
-      position: fixed;
-      bottom: 0;
-      padding: 20px;
-      right: 0;
-      border: 1px solid #6620cf;
-      display: flex;
-      justify-content: space-between;
-
-      #mainTitle {
-        text-shadow: 2px 2px#6620cf;
-      }
-
-      #menubar {
-        margin: auto 0;
-      }
-    }
-
-    #main {
-      padding: 40px;
+    #logo {
+      width: 10%;
     }
 
     #footer {
-      border: 1px solid #6620cf;
-      color: rgb(205, 205, 255);
+      position: absolute;
+      bottom: 0px;
+      height: 20px;
+      margin: auto 0;
     }
   }
 }

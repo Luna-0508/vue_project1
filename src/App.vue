@@ -24,18 +24,18 @@ export default {
 </script>
 
 <template>
-  <Layout
-    ><div class="content">
+  <Layout>
+    <!-- <div class="content">
       <router-link to="/todolist">ToDo List</router-link>
       <router-link to="/users">Users List</router-link>
       <router-link to="/form">Form</router-link>
-    </div>
+    </div> -->
     <RouterView />
   </Layout>
 </template>
 
 <style>
-.content {
+/* .content {
   margin: 10px auto;
   position: relative;
   background-color: white;
@@ -49,5 +49,5 @@ a {
   margin-right: 20px;
   display: flex;
   justify-content: center;
-}
+} */
 </style>
