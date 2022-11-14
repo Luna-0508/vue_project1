@@ -4,8 +4,6 @@ import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
 
-import "./assets/main.css";
-
 import PrimeVue from "primevue/config";
 import Dialog from "primevue/dialog/sfc";
 import DataTable from "primevue/datatable";

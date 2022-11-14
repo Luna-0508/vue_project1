@@ -1,26 +1,33 @@
 <template>
-  <div id="body">
+  <div class="card bg-blue-700">
     <!-- HEADER -->
-    <div id="header">
-      <img
-        id="logo"
-        alt="logo"
-        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/business-logo-design-template-78655edda18bc1196ab28760f1535baa_screen.jpg?ts=1617645324"
-      />
-      <div>PANEL UŻYTKOWNIKA</div>
+    <div id="header" class="card grid">
+      <div class="col">
+        <img
+          id="logo"
+          alt="logo"
+          src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/business-logo-design-template-78655edda18bc1196ab28760f1535baa_screen.jpg?ts=1617645324"
+        />
+      </div>
+
+      <div class="col">PANEL UŻYTKOWNIKA</div>
     </div>
 
     <!-- MENU -->
-    <div id="menu">
-      <div class="card">
-        <TabMenu :model="items" />
-        <!-- <RouterView /> -->
+    <div class="card">
+      <div id="menu">
+        <div class="card">
+          <TabMenu :model="items" />
+          <RouterView />
+        </div>
       </div>
     </div>
 
     <!-- FOOTER -->
-    <div id="footer">
-      <p>ADMIN-PANEL 2022</p>
+    <div class="card">
+      <div id="footer">
+        <p class="text-center">ADMIN-PANEL 2022</p>
+      </div>
     </div>
   </div>
 </template>
@@ -34,7 +41,7 @@ export default {
         {
           label: "Home",
           icon: "pi pi-fw pi-home",
-          to: "/",
+          to: "/home",
         },
         {
           label: "Calendar",

@@ -1,27 +1,8 @@
 * {
   box-sizing: border-box;
+  padding: 0;
 }
 
-#body {
-  min-height: 100vh;
-  background-color: #006699;
-  position: relative;
-
-  #header {
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    height: 120px;
-
-    #logo {
-      width: 10%;
-    }
-
-    #footer {
-      position: absolute;
-      bottom: 0px;
-      height: 20px;
-      margin: auto 0;
-    }
-  }
+#logo {
+  width: 10%;
 }
