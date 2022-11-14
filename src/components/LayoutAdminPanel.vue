@@ -29,17 +29,22 @@
     <div
       class="card p-4 flex flex-wrap align-items-center justify-content-center pb-8"
     >
-      <RouterView />
-    </div>
+      <RouterView v-slot="{ Component }">
+        <transition name="fade">
+          <component :is="Component" />
+        </transition>
+      </RouterView>
 
-    <!-- FOOTER -->
-    <div
-      d="footer"
-      class="card flex align-items-end justify-content-center border-top-1 border-200 absolute bottom-0 w-full"
-    >
-      <p class="text-center">FOOTER ADMIN-PANEL 2022</p>
+      <!-- FOOTER -->
+      <div
+        d="footer"
+        class="card flex align-items-end justify-content-center border-top-1 border-200 absolute bottom-0 w-full"
+      >
+        <p class="text-center">FOOTER ADMIN-PANEL 2022</p>
+      </div>
     </div>
   </div>
+  div>
 </template>
 
 <script>
@@ -52,6 +57,7 @@ export default {
           label: "Home",
           icon: "pi pi-fw pi-home",
           to: "/home",
+          meta: { transition: "slide-right" },
         },
         {
           label: "Calendar",
@@ -79,8 +85,16 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 ::v-deep(.tabmenudemo-content) {
   padding: 2rem 1rem;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

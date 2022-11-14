@@ -10,6 +10,8 @@ export default {
 };
 </script>
 
-<template><Layout></Layout></template>
+<template>
+  <Layout></Layout>
+</template>
 
 <style></style>
