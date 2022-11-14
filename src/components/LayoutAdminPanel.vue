@@ -1,5 +1,5 @@
 <template>
-  <div class="card bg-blue-700 flex flex-column min-h-screen m-0 p-0 relative">
+  <div class="bg-blue-700 flex flex-column min-h-screen m-0 p-0 relative">
     <!-- HEADER -->
     <div id="header" class="card flex justify-content-between max-h-9rem p-4">
       <div class="flex align-items-center justify-content-left">
@@ -27,7 +27,7 @@
 
     <!-- CONTENT -->
     <div
-      class="card p-4 flex flex-wrap align-items-center justify-content-center"
+      class="card p-4 flex flex-wrap align-items-center justify-content-center pb-8"
     >
       <RouterView />
     </div>
