@@ -14,13 +14,15 @@
     </div>
 
     <!-- MENU -->
-    <div class="card">
-      <div id="menu">
-        <div class="card">
-          <TabMenu :model="items" />
-          <RouterView />
-        </div>
-      </div>
+    <div id="menu" class="card p-3">
+      <TabMenu :model="items" />
+    </div>
+
+    <!-- CONTENT -->
+    <div
+      class="card p-4 flex flex-wrap align-items-center justify-content-center"
+    >
+      <RouterView />
     </div>
 
     <!-- FOOTER -->
