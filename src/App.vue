@@ -1,7 +1,7 @@
 <script>
 import { def } from "@vue/shared";
 import { RouterLink, RouterView } from "vue-router";
-import Layout from "./components/Layout.vue";
+import Layout from "./components/LayoutAdminPanel.vue";
 import { useUsers } from "./stores/users";
 
 export default {
