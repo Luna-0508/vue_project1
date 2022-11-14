@@ -19,6 +19,7 @@ import InputSwitch from "primevue/inputswitch";
 import TabMenu from "primevue/tabmenu";
 import ScrollTop from "primevue/scrolltop";
 import Calendar from "primevue/calendar";
+import Carousel from "primevue/carousel";
 
 import "./assets/_app.scss";
 import "/node_modules/primeflex/primeflex.css";
@@ -40,4 +41,6 @@ app.component("Button", Button);
 app.component("TabMenu", TabMenu);
 app.component("ScrollTop", ScrollTop);
 app.component("Calendar", Calendar);
+app.component("Carousel", Carousel);
+
 app.mount("#app");

@@ -59,9 +59,9 @@ export default {
           to: "/calendar",
         },
         {
-          label: "Edit",
+          label: "Buy now",
           icon: "pi pi-fw pi-pencil",
-          to: "/edit",
+          to: "/shop",
         },
         {
           label: "Documentation",

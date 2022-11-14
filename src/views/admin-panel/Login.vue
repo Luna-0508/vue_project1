@@ -82,7 +82,7 @@
               >{{ v$.email.required.$message.replace("Value", "Email") }}</small
             >
           </div>
-          <div class="field">
+          <!-- <div class="field">
             <div class="p-float-label">
               <Password
                 id="password"
@@ -121,14 +121,14 @@
                 v$.password.required.$message.replace("Value", "Password")
               }}</small
             >
-          </div>
+          </div> -->
           <div class="field">
             <div class="p-float-label">
               <Calendar id="date" v-model="date" :showIcon="true" />
               <label for="date">Birthday</label>
             </div>
           </div>
-          <div class="field">
+          <!-- <div class="field">
             <div class="p-float-label">
               <Dropdown
                 id="country"
@@ -138,7 +138,7 @@
               />
               <label for="country">Country</label>
             </div>
-          </div>
+          </div> -->
           <div class="field-checkbox">
             <Checkbox
               id="accept"
