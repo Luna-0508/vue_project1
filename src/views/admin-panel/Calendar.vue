@@ -57,9 +57,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.special-day {
-  text-decoration: line-through;
-}
-</style>

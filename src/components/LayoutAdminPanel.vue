@@ -1,21 +1,28 @@
 <template>
-  <div class="card bg-blue-700">
+  <div class="card bg-blue-700 flex flex-column min-h-screen m-0 p-0 relative">
     <!-- HEADER -->
-    <div id="header" class="card grid">
-      <div class="col">
+    <div id="header" class="card flex justify-content-between max-h-9rem p-4">
+      <div class="flex align-items-center justify-content-left">
         <img
           id="logo"
           alt="logo"
           src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/business-logo-design-template-78655edda18bc1196ab28760f1535baa_screen.jpg?ts=1617645324"
+          class="shadow-5 w-2"
         />
       </div>
 
-      <div class="col">PANEL UŻYTKOWNIKA</div>
+      <div
+        class="card flex align-items-center justify-content-center p-right-5"
+      >
+        <router-link to="/login" class="no-underline shadow-5">
+          <Button label="LOG IN"
+        /></router-link>
+      </div>
     </div>
 
     <!-- MENU -->
     <div id="menu" class="card p-3">
-      <TabMenu :model="items" />
+      <TabMenu :model="items" class="shadow-5 border-round-sm" />
     </div>
 
     <!-- CONTENT -->
@@ -26,10 +33,11 @@
     </div>
 
     <!-- FOOTER -->
-    <div class="card">
-      <div id="footer">
-        <p class="text-center">ADMIN-PANEL 2022</p>
-      </div>
+    <div
+      d="footer"
+      class="card flex align-items-end justify-content-center border-top-1 border-200 absolute bottom-0 w-full"
+    >
+      <p class="text-center">FOOTER ADMIN-PANEL 2022</p>
     </div>
   </div>
 </template>
