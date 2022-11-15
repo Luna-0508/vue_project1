@@ -9,31 +9,43 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "/",
-      name: "app",
-      component: App,
-    },
-    {
       path: "/home",
       name: "home",
       component: Home,
+      meta: {
+        title: "Home page",
+      },
     },
     {
       path: "/calendar",
       name: "calendar",
       component: Calendar,
+      meta: {
+        title: "Calendar",
+      },
     },
     {
       path: "/login",
       name: "login",
       component: Login,
+      meta: {
+        title: "Login Page",
+      },
     },
     {
       path: "/shop",
       name: "shop",
       component: Shop,
+      meta: {
+        title: "Shop Page",
+      },
     },
   ],
 });
 
+router.beforeEach((to, from, next) => {
+  console.log(to);
+  document.title = `Admin Panel - ${to.meta.title}`;
+  next();
+});
 export default router;
