@@ -5,6 +5,8 @@ import Calendar from "../views/admin-panel/Calendar.vue";
 import Login from "../views/admin-panel/Login.vue";
 import Shop from "../views/admin-panel/Shop.vue";
 
+// import useMeta from "vue-meta";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -43,9 +45,11 @@ const router = createRouter({
   ],
 });
 
+//to - actual root we are going to, from - root that we just came from, next -  method we need to fire to load root -
 router.beforeEach((to, from, next) => {
   console.log(to);
   document.title = `Admin Panel - ${to.meta.title}`;
   next();
 });
+
 export default router;

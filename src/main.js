@@ -20,14 +20,19 @@ import TabMenu from "primevue/tabmenu";
 import ScrollTop from "primevue/scrolltop";
 import Calendar from "primevue/calendar";
 import Carousel from "primevue/carousel";
+// import createMetaManager from "vue-meta";
+import { createHead } from "@vueuse/head";
 
 import "./assets/_app.scss";
 import "/node_modules/primeflex/primeflex.css";
 
 const app = createApp(App);
+const head = createHead();
 
 app.use(createPinia());
 app.use(router);
+app.use(head);
+// app.use(createMetaManager());
 
 app.use(PrimeVue);
 app.component("Dialog", Dialog);
