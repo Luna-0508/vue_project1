@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue-700 flex flex-column min-h-screen m-0 p-0 relative">
+  <div class="bg-blue-700 flex flex-column min-h-screen w-full p-0 relative">
     <!-- HEADER -->
     <div id="header" class="card flex justify-content-between max-h-9rem p-4">
       <div class="flex align-items-center justify-content-left">
@@ -44,7 +44,6 @@
       </div>
     </div>
   </div>
-  div>
 </template>
 
 <script>
@@ -66,7 +65,7 @@ export default {
         },
         {
           label: "Buy now",
-          icon: "pi pi-fw pi-pencil",
+          icon: "pi pi-cart-plus",
           to: "/shop",
         },
         {
