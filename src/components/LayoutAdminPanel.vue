@@ -71,12 +71,12 @@ export default {
         {
           label: "Documentation",
           icon: "pi pi-fw pi-file",
-          to: "",
+          to: "/documentation",
         },
         {
           label: "Settings",
           icon: "pi pi-fw pi-cog",
-          to: "",
+          to: "/settings",
         },
       ],
     };

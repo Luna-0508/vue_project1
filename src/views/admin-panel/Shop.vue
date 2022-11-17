@@ -1,3 +1,41 @@
+<script>
+import ProductService from "../../components/admin-panel/Shop.vue";
+
+export default {
+  data() {
+    return {
+      products: null,
+      responsiveOptions: [
+        {
+          breakpoint: "1024px",
+          numVisible: 3,
+          numScroll: 3,
+        },
+        {
+          breakpoint: "600px",
+          numVisible: 2,
+          numScroll: 2,
+        },
+        {
+          breakpoint: "480px",
+          numVisible: 1,
+          numScroll: 1,
+        },
+      ],
+    };
+  },
+  productService: null,
+  created() {
+    this.productService = new ProductService();
+  },
+  mounted() {
+    this.productService
+      .getProductsSmall()
+      .then(data => (this.products = data.slice(0, 9)));
+  },
+};
+</script>
+
 <template>
   <div>
     <div class="card">
@@ -49,44 +87,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import ProductService from "/products";
-
-export default {
-  data() {
-    return {
-      products: null,
-      responsiveOptions: [
-        {
-          breakpoint: "1024px",
-          numVisible: 3,
-          numScroll: 3,
-        },
-        {
-          breakpoint: "600px",
-          numVisible: 2,
-          numScroll: 2,
-        },
-        {
-          breakpoint: "480px",
-          numVisible: 1,
-          numScroll: 1,
-        },
-      ],
-    };
-  },
-  productService: null,
-  created() {
-    this.productService = new ProductService();
-  },
-  mounted() {
-    this.productService
-      .getProductsSmall()
-      .then(data => (this.products = data.slice(0, 9)));
-  },
-};
-</script>
 
 <style lang="scss" scoped>
 .product-item {
