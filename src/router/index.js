@@ -4,6 +4,9 @@ import Home from "../views/admin-panel/Home.vue";
 import Calendar from "../views/admin-panel/Calendar.vue";
 import Login from "../views/admin-panel/Login.vue";
 import Shop from "../views/admin-panel/Shop.vue";
+import Orders from "../views/admin-panel/home-children/Orders.vue";
+import Comments from "../views/admin-panel/home-children/Comments.vue";
+import Revenue from "../views/admin-panel/home-children/Revenue.vue";
 
 // import useMeta from "vue-meta";
 
@@ -16,6 +19,30 @@ const router = createRouter({
       component: Home,
       meta: {
         title: "Home page",
+      },
+    },
+    {
+      path: "/orders",
+      name: "orders",
+      component: Orders,
+      meta: {
+        title: "Orders",
+      },
+    },
+    {
+      path: "/comments",
+      name: "comments",
+      component: Comments,
+      meta: {
+        title: "Comments",
+      },
+    },
+    {
+      path: "/revenue",
+      name: "revenue",
+      component: Revenue,
+      meta: {
+        title: "Revenue",
       },
     },
     {

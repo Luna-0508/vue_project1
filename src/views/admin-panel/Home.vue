@@ -28,6 +28,41 @@ export default {
     <div class="surface-ground px-4 py-5 md:px-6 lg:px-8 border-round">
       <div class="grid">
         <div class="col-12 md:col-6 lg:col-3">
+          <router-link :to="{ name: 'orders' }">
+            <Button
+              label="ORDERS"
+              class="p-button-raised p-button-text p-button-plain flex justify-content-between mb-3"
+            />
+          </router-link>
+        </div>
+        <div class="col-12 md:col-6 lg:col-3">
+          <router-link :to="{ name: 'revenue' }">
+            <Button
+              label="REVENUE"
+              class="p-button-raised p-button-text p-button-plain flex justify-content-between mb-3"
+            />
+          </router-link>
+        </div>
+        <div class="col-12 md:col-6 lg:col-3">
+          <Button
+            label="CUSTOMERS"
+            class="p-button-raised p-button-text p-button-plain flex justify-content-between mb-3"
+          />
+        </div>
+        <div class="col-12 md:col-6 lg:col-3">
+          <router-link :to="{ name: 'comments' }">
+            <Button
+              label="COMMENTS"
+              class="p-button-raised p-button-text p-button-plain flex justify-content-between mb-3"
+            />
+          </router-link>
+        </div>
+      </div>
+
+      <!--  KAFELKI-->
+
+      <div class="grid">
+        <div class="col-12 md:col-6 lg:col-3">
           <div class="surface-card shadow-2 p-3 border-round">
             <div class="flex justify-content-between mb-3">
               <div>
