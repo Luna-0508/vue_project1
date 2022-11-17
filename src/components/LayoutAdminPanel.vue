@@ -22,7 +22,18 @@
 
     <!-- MENU -->
     <div id="menu" class="card p-3">
-      <TabMenu :model="items" class="shadow-5 border-round-sm" />
+      <div>
+        <Menubar :model="items" class="shadow-5 border-round-sm">
+          <template #start>
+            <img
+              alt="logo"
+              src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/business-logo-design-template-78655edda18bc1196ab28760f1535baa_screen.jpg?ts=1617645324"
+              height="40"
+              class="mr-2"
+            />
+          </template>
+        </Menubar>
+      </div>
     </div>
 
     <!-- CONTENT -->
@@ -50,7 +61,7 @@
 export default {
   data() {
     return {
-      active: 3,
+      active: 6,
       items: [
         {
           label: "Home",
@@ -58,20 +69,55 @@ export default {
           to: "/home",
           meta: { transition: "slide-right" },
         },
-        {
-          label: "Calendar",
-          icon: "pi pi-fw pi-calendar",
-          to: "/calendar",
-        },
+
         {
           label: "Shop",
           icon: "pi pi-cart-plus",
           to: "/shop",
         },
         {
+          label: "Calendar",
+          icon: "pi pi-fw pi-calendar",
+          to: "/calendar",
+        },
+        {
           label: "Documentation",
           icon: "pi pi-fw pi-file",
           to: "/documentation",
+        },
+        {
+          label: "Users",
+          icon: "pi pi-fw pi-user",
+          items: [
+            {
+              label: "New",
+              icon: "pi pi-fw pi-user-plus",
+            },
+            {
+              label: "Delete",
+              icon: "pi pi-fw pi-user-minus",
+            },
+            {
+              label: "Search",
+              icon: "pi pi-fw pi-users",
+              items: [
+                {
+                  label: "Filter",
+                  icon: "pi pi-fw pi-filter",
+                  items: [
+                    {
+                      label: "Print",
+                      icon: "pi pi-fw pi-print",
+                    },
+                  ],
+                },
+                {
+                  icon: "pi pi-fw pi-bars",
+                  label: "List",
+                },
+              ],
+            },
+          ],
         },
         {
           label: "Settings",
