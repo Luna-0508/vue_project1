@@ -14,6 +14,7 @@
       <div
         class="card flex align-items-center justify-content-center p-right-5"
       >
+        <Avatar icon="pi pi-user" class="mr-2" size="xlarge" />
         <router-link to="/login" class="no-underline shadow-5">
           <Button label="LOG IN"
         /></router-link>
@@ -41,8 +42,8 @@
     <div
       class="card p-4 flex flex-wrap align-items-center justify-content-center pb-8"
     >
-      <GoBack />
       <RouterView v-slot="{ Component }">
+        <GoBack />
         <transition name="fade">
           <component :is="Component" />
         </transition>

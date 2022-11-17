@@ -1,11 +1,11 @@
 <template>
-  <span class="go-back absolute">
+  <div class="go-back absolute z-999">
     <Button
       @click="goBack"
       icon="pi pi-heart"
       class="p-button-rounded p-button-help"
     />
-  </span>
+  </div>
 </template>
 
 <script>

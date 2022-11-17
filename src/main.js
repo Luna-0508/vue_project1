@@ -22,6 +22,8 @@ import Calendar from "primevue/calendar";
 import Carousel from "primevue/carousel";
 // import createMetaManager from "vue-meta";
 import { createHead } from "@vueuse/head";
+import FileUpload from "primevue/fileupload";
+import Avatar from "primevue/avatar";
 
 import "./assets/_app.scss";
 import "/node_modules/primeflex/primeflex.css";
@@ -47,5 +49,7 @@ app.component("TabMenu", TabMenu);
 app.component("ScrollTop", ScrollTop);
 app.component("Calendar", Calendar);
 app.component("Carousel", Carousel);
+app.component("FileUpload", FileUpload);
+app.component("Avatar", Avatar);
 
 app.mount("#app");
