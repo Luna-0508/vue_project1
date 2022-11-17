@@ -7,9 +7,6 @@
         :numScroll="3"
         :responsiveOptions="responsiveOptions"
       >
-        <!-- <template #header>
-          <h5>SHOP</h5>
-        </template> -->
         <template #item="slotProps">
           <div class="product-item">
             <div class="product-item-content">

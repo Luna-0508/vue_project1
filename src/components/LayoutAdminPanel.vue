@@ -64,7 +64,7 @@ export default {
           to: "/calendar",
         },
         {
-          label: "Buy now",
+          label: "Shop",
           icon: "pi pi-cart-plus",
           to: "/shop",
         },
