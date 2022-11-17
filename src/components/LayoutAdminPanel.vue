@@ -14,7 +14,7 @@
       <div
         class="card flex align-items-center justify-content-center p-right-5"
       >
-        <Avatar icon="pi pi-user" class="mr-2" size="xlarge" />
+        <Avatar icon="pi pi-user" class="mr-2 shadow-5" size="xlarge" />
         <router-link to="/login" class="no-underline shadow-5">
           <Button label="LOG IN"
         /></router-link>

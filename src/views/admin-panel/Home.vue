@@ -139,24 +139,26 @@ export default {
   </div>
 
   <!-- TODAY ORDERS -->
-  <div id="todayOrders" class="pb-3">
-    <div class="surface-ground px-1 py-3 md:px-2 lg:px-3 border-round">
-      <div class="card">
-        <DataTable :value="orders" responsiveLayout="scroll">
-          <template #header> Today Orders </template>
-          <Column field="code" header="Code"></Column>
-          <Column field="name" header="Name"></Column>
-          <Column field="category" header="Category"></Column>
-          <Column field="quantity" header="Quantity"></Column>
-        </DataTable>
+  <div class="flex">
+    <div id="todayOrders" class="pb-3">
+      <div class="surface-ground px-1 py-3 md:px-2 lg:px-3 border-round">
+        <div class="card">
+          <DataTable :value="orders" responsiveLayout="scroll">
+            <template #header> Today Orders </template>
+            <Column field="code" header="Code"></Column>
+            <Column field="name" header="Name"></Column>
+            <Column field="category" header="Category"></Column>
+            <Column field="quantity" header="Quantity"></Column>
+          </DataTable>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- STATISTICS -->
-  <div id="statistic" class="pb-3 pl-3">
-    <div class="surface-ground px-2 py-2 md:px-2 lg:px-2 border-round">
-      <StatisticChart />
+    <!-- STATISTICS -->
+    <div id="statistic" class="pb-3 pl-3 t-0">
+      <div class="surface-ground px-2 py-2 md:px-2 lg:px-2 border-round">
+        <StatisticChart />
+      </div>
     </div>
   </div>
 </template>
