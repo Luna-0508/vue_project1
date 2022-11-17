@@ -138,9 +138,9 @@ export default {
     </div>
   </div>
 
-  <!-- LAST ORDERS -->
+  <!-- TODAY ORDERS -->
   <div id="todayOrders" class="pb-3">
-    <div class="surface-ground px-4 py-5 md:px-6 lg:px-8 border-round">
+    <div class="surface-ground px-1 py-3 md:px-2 lg:px-3 border-round">
       <div class="card">
         <DataTable :value="orders" responsiveLayout="scroll">
           <template #header> Today Orders </template>

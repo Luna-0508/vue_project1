@@ -81,9 +81,9 @@ export default {
           to: "/calendar",
         },
         {
-          label: "Documentation",
+          label: "Files",
           icon: "pi pi-fw pi-file",
-          to: "/documentation",
+          to: "/files",
         },
         {
           label: "Users",

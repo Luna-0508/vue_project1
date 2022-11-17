@@ -7,6 +7,8 @@ import Shop from "../views/admin-panel/Shop.vue";
 import Orders from "../views/admin-panel/home-children/Orders.vue";
 import Comments from "../views/admin-panel/home-children/Comments.vue";
 import Revenue from "../views/admin-panel/home-children/Revenue.vue";
+import Files from "../views/admin-panel/Files.vue";
+import Settings from "../views/admin-panel/Settings.vue";
 
 // import useMeta from "vue-meta";
 
@@ -67,6 +69,22 @@ const router = createRouter({
       component: Shop,
       meta: {
         title: "Shop Page",
+      },
+    },
+    {
+      path: "/files",
+      name: "files",
+      component: Files,
+      meta: {
+        title: "Files",
+      },
+    },
+    {
+      path: "/settings",
+      name: "settings",
+      component: Settings,
+      meta: {
+        title: "Settings",
       },
     },
   ],
