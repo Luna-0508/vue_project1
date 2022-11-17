@@ -1,11 +1,18 @@
 <script>
-import orderData from "../../../products.json";
+import orderData from "../../components/admin-panel/home-page/Orders.vue";
 
 export default {
   data() {
     return {
-      orders: orderData,
+      orders: null,
     };
+  },
+  orderData: null,
+  created() {
+    this.orderData = new orderData();
+  },
+  mounted() {
+    this.orderData.getOrders().then(data => (this.orders = data));
   },
 };
 </script>
@@ -96,36 +103,12 @@ export default {
   <div id="todayOrders" class="pb-3">
     <div class="surface-ground px-4 py-5 md:px-6 lg:px-8 border-round">
       <div class="card">
-        <DataTable responsiveLayout="scroll">
-          <template #header> TODAY ORDERS </template>
-          <Column
-            field="code"
-            header="Code"
-            v-for="order in orders"
-            :key="order.id"
-            >{{ order.code }}</Column
-          >
-          <Column
-            field="name"
-            header="Name"
-            v-for="order in orders"
-            :key="order.id"
-            >{{ order.name }}</Column
-          >
-          <Column
-            field="category"
-            header="Category"
-            v-for="order in orders"
-            :key="order.id"
-            >{{ order.category }}</Column
-          >
-          <Column
-            field="quantity"
-            header="Quantity"
-            v-for="order in orders"
-            :key="order.id"
-            >{{ order.quantity }}</Column
-          >
+        <DataTable :value="orders" responsiveLayout="scroll">
+          <template #header> Today Orders </template>
+          <Column field="code" header="Code"></Column>
+          <Column field="name" header="Name"></Column>
+          <Column field="category" header="Category"></Column>
+          <Column field="quantity" header="Quantity"></Column>
         </DataTable>
       </div>
     </div>

@@ -1,58 +1,52 @@
-[
-  {
-    "id": "1",
-    "code": "e123",
-    "name": "Bamboo Watch",
-    "category": "accessories",
-    "quantity": "3"
-  },
-  {
-    "id": "2",
-    "code": "e133",
-    "name": "Black Watch",
-    "category": "accessories",
-    "quantity": "1"
-  },
-  {
-    "id": "3",
-    "code": "e198",
-    "name": "Blue Band",
-    "category": "accessories",
-    "quantity": "0"
-  },
-  {
-    "id": "4",
-    "code": "e167",
-    "name": "Blue T-shirt",
-    "category": "clothes",
-    "quantity": "1"
-  },
-  {
-    "id": "5",
-    "code": "e156",
-    "name": "Bracelet",
-    "category": "accessories",
-    "quantity": "1"
-  },
-  {
-    "id": "6",
-    "code": "e131",
-    "name": "Brown Purse",
-    "category": "bags",
-    "quantity": "2"
-  },
-  {
-    "id": "7",
-    "code": "e194",
-    "name": "Chakra Bracelet",
-    "category": "accessories",
-    "quantity": "5"
-  },
-  {
-    "id": "8",
-    "code": "e102",
-    "name": "Galaxy Earrings",
-    "category": "jewelry",
-    "quantity": "1"
-  }
-]
+{
+  "data": [
+    {
+      "code": "e123",
+      "name": "Bamboo Watch",
+      "category": "accessories",
+      "quantity": "3"
+    },
+    {
+      "code": "e133",
+      "name": "Black Watch",
+      "category": "accessories",
+      "quantity": "1"
+    },
+    {
+      "code": "e198",
+      "name": "Blue Band",
+      "category": "accessories",
+      "quantity": "0"
+    },
+    {
+      "code": "e167",
+      "name": "Blue T-shirt",
+      "category": "clothes",
+      "quantity": "1"
+    },
+    {
+      "code": "e156",
+      "name": "Bracelet",
+      "category": "accessories",
+      "quantity": "1"
+    },
+    {
+      "code": "e131",
+      "name": "Brown Purse",
+      "category": "bags",
+      "quantity": "2"
+    },
+    {
+      "code": "e194",
+      "name": "Chakra Bracelet",
+      "category": "accessories",
+      "quantity": "5"
+    },
+    {
+      "code": "e102",
+      "name": "Galaxy Earrings",
+      "category": "jewelry",
+      "quantity": "1"
+    }
+  ]
+}
