@@ -37,9 +37,11 @@
     </div>
 
     <!-- CONTENT -->
+
     <div
       class="card p-4 flex flex-wrap align-items-center justify-content-center pb-8"
     >
+      <GoBack />
       <RouterView v-slot="{ Component }">
         <transition name="fade">
           <component :is="Component" />
