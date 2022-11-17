@@ -1,5 +1,6 @@
 <script>
 import orderData from "../../components/admin-panel/home-page/Orders.vue";
+import StatisticChart from "../../components/admin-panel/home-page/StatisticChart.vue";
 
 export default {
   data() {
@@ -13,6 +14,9 @@ export default {
   },
   mounted() {
     this.orderData.getOrders().then(data => (this.orders = data));
+  },
+  components: {
+    StatisticChart,
   },
 };
 </script>
@@ -111,6 +115,13 @@ export default {
           <Column field="quantity" header="Quantity"></Column>
         </DataTable>
       </div>
+    </div>
+  </div>
+
+  <!-- STATISTICS -->
+  <div id="statistic" class="pb-3 pl-3">
+    <div class="surface-ground px-2 py-2 md:px-2 lg:px-2 border-round">
+      <StatisticChart />
     </div>
   </div>
 </template>
